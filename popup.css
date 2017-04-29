@@ -3,7 +3,7 @@ body {
   font-size: 100%;
 }
 
-#status {
+#title {
   /* avoid an excessively wide status text */
   white-space: pre;
   text-overflow: ellipsis;
