@@ -32,7 +32,7 @@ let getCurrentTabUrl = (callback) => {
     // If you want to see the URL of other tabs (e.g. after removing active:true
     // from |queryInfo|), then the "tabs" permission is required to see their
     // "url" properties.
-    console.assert(typeof url == 'string', 'tab.url should be a string');
+    console.assert(typeof url === 'string', 'tab.url should be a string');
 
     callback(url);
   });
@@ -45,7 +45,7 @@ let getCurrentTabUrl = (callback) => {
   //   url = tabs[0].url;
   // });
   // alert(url); // Shows "undefined", because chrome.tabs.query is async.
-}
+};
 
 /**
  * @param {string} searchTerm - Search term for Google Image search.
@@ -78,7 +78,7 @@ let getImageUrl = (searchTerm, callback, errorCallback) => {
     let width = parseInt(firstResult.tbWidth);
     let height = parseInt(firstResult.tbHeight);
     console.assert(
-        typeof imageUrl == 'string' && !isNaN(width) && !isNaN(height),
+        typeof imageUrl === 'string' && !isNaN(width) && !isNaN(height),
         'Unexpected respose from the Google Image Search API!');
     callback(imageUrl, width, height);
   };
@@ -86,11 +86,11 @@ let getImageUrl = (searchTerm, callback, errorCallback) => {
     errorCallback('Network error.');
   };
   x.send();
-}
+};
 
 let renderStatus = (statusText) => {
   document.getElementById('status').textContent = statusText;
-}
+};
 
 document.addEventListener('DOMContentLoaded', () => {
   getCurrentTabUrl((url) => {
@@ -98,7 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
     renderStatus('Performing Google Image search for ' + url);
 
     getImageUrl(url, (imageUrl, width, height) => {
-
       renderStatus('Search term: ' + url + '\n' +
           'Google image search result: ' + imageUrl);
       let imageResult = document.getElementById('image-result');
@@ -110,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
       imageResult.height = height;
       imageResult.src = imageUrl;
       imageResult.hidden = false;
-
     }, (errorMessage) => {
       renderStatus('Cannot display image. ' + errorMessage);
     });
