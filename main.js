@@ -1,1 +1,4 @@
-console.log(document);
+window.onload = () => {
+  console.log(document);
+
+};
