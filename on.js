@@ -19,20 +19,35 @@ document.body.appendChild(background);
 
 let nextButton = document.createElement('button');
 nextButton.style.display = 'block';
-nextButton.innerText = 'Next';
+nextButton.innerText = ' > ';
 nextButton.className += 'qzpm_47';
 nextButton.style.position = 'absolute';
-nextButton.style.top = '40%';
+nextButton.style.top = '20%';
 nextButton.style.right = '4%';
+nextButton.style.borderRadius = '10px';
+nextButton.style.border = '2px solid';
+nextButton.style.fontWeight = 'bold';
+nextButton.style.fontWeight = 'bold';
+nextButton.style.height = '50px';
+nextButton.style.width = '50px';
+nextButton.style.fontSize = '30px';
+nextButton.style.background = 'lightcyan';
 
 
 let prevButton = document.createElement('button');
 prevButton.style.display = 'block';
-prevButton.innerText = 'Previous';
+prevButton.innerText = ' < ';
 prevButton.className += 'qzpm_57';
 prevButton.style.position = 'absolute';
-prevButton.style.top = '40%';
+prevButton.style.top = '20%';
 prevButton.style.left = '1%';
+prevButton.style.borderRadius = '10px';
+prevButton.style.border = '2px solid';
+prevButton.style.fontWeight = 'bold';
+prevButton.style.height = '50px';
+prevButton.style.width = '50px';
+prevButton.style.fontSize = '30px';
+prevButton.style.background = 'lightcyan';
 
 
 let didCreatePrev = false;
