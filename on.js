@@ -20,11 +20,19 @@ let nextButton = document.createElement('button');
 nextButton.style.display = 'block';
 nextButton.innerText = 'Next';
 nextButton.className += 'qzpm_47';
+nextButton.style.position = 'absolute';
+nextButton.style.top = '40%';
+nextButton.style.right = '4%';
+
 
 let prevButton = document.createElement('button');
 prevButton.style.display = 'block';
 prevButton.innerText = 'Previous';
 prevButton.className += 'qzpm_57';
+prevButton.style.position = 'absolute';
+prevButton.style.top = '40%';
+prevButton.style.left = '1%';
+
 
 let didCreatePrev = false;
 let i = 0;
@@ -35,6 +43,14 @@ if (i === 0) {
   paragraph.style.display = 'block';
   paragraph.className += 'qzpm_37';
   background.appendChild(paragraph);
+  paragraph.style.color = '#525252';
+  paragraph.style.margin =  '100px 100px 100px 100px';
+  paragraph.style.fontSize = '1.4em';
+  paragraph.style.lineHeight = '2em';
+  paragraph.style.border = 'solid';
+  paragraph.style.borderRadius = '15px';
+  paragraph.style.padding = '10px 10px 10px 10px';
+
 }
 
 nextButton.onclick = () => {
@@ -46,6 +62,13 @@ nextButton.onclick = () => {
     paragraph.style.display = 'block';
     paragraph.className += 'qzpm_37';
     background.appendChild(paragraph);
+    paragraph.style.color = '#525252';
+    paragraph.style.margin =  '100px 100px 100px 100px';
+    paragraph.style.fontSize = '1.4em';
+    paragraph.style.lineHeight = '2em';
+    paragraph.style.border = 'solid';
+    paragraph.style.borderRadius = '15px';
+    paragraph.style.padding = '10px 10px 10px 10px';
   } else {
     document.getElementsByClassName('qzpm_37')[i + 1].style.display = 'block';
   }
@@ -64,6 +87,14 @@ background.appendChild(nextButton);
 prevButton.onclick = () => {
   document.getElementsByClassName('qzpm_37')[i].style.display = 'none';
   document.getElementsByClassName('qzpm_37')[i - 1].style.display = 'block';
+  document.getElementsByClassName('qzpm_37')[i - 1].style.color = '#525252';
+  document.getElementsByClassName('qzpm_37')[i - 1].style.margin = '100px 100px 100px 100px';
+  document.getElementsByClassName('qzpm_37')[i - 1].style.fontSize = '1.4em';
+  document.getElementsByClassName('qzpm_37')[i - 1].style.lineHeight = '2em';
+  document.getElementsByClassName('qzpm_37')[i - 1].style.border = 'solid';
+  document.getElementsByClassName('qzpm_37')[i - 1].style.borderRadius = '15px';
+  document.getElementsByClassName('qzpm_37')[i - 1].style.padding = '10px 10px 10px 10px';
+
   i--;
   if (i === 0) {
     prevButton.style.display = 'none';
