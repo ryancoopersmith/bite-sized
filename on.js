@@ -12,7 +12,9 @@ for (let i = 0; i < all.length; i++) {
 
 let background = document.createElement('div');
 background.style.display = 'block';
-background.style.height = '100vh';
+background.style.position = 'absolute';
+background.style.height = '100%';
+background.style.width = '100%';
 background.style.background = 'lightcyan';
 document.body.appendChild(background);
 
@@ -44,7 +46,7 @@ if (i === 0) {
   paragraph.className += 'qzpm_37';
   background.appendChild(paragraph);
   paragraph.style.color = '#525252';
-  paragraph.style.margin =  '100px 100px 100px 100px';
+  paragraph.style.margin =  '100px';
   paragraph.style.fontSize = '1.4em';
   paragraph.style.lineHeight = '2em';
   paragraph.style.border = 'solid';
@@ -63,7 +65,7 @@ nextButton.onclick = () => {
     paragraph.className += 'qzpm_37';
     background.appendChild(paragraph);
     paragraph.style.color = '#525252';
-    paragraph.style.margin =  '100px 100px 100px 100px';
+    paragraph.style.margin =  '100px';
     paragraph.style.fontSize = '1.4em';
     paragraph.style.lineHeight = '2em';
     paragraph.style.border = 'solid';
@@ -88,7 +90,7 @@ prevButton.onclick = () => {
   document.getElementsByClassName('qzpm_37')[i].style.display = 'none';
   document.getElementsByClassName('qzpm_37')[i - 1].style.display = 'block';
   document.getElementsByClassName('qzpm_37')[i - 1].style.color = '#525252';
-  document.getElementsByClassName('qzpm_37')[i - 1].style.margin = '100px 100px 100px 100px';
+  document.getElementsByClassName('qzpm_37')[i - 1].style.margin = '100px';
   document.getElementsByClassName('qzpm_37')[i - 1].style.fontSize = '1.4em';
   document.getElementsByClassName('qzpm_37')[i - 1].style.lineHeight = '2em';
   document.getElementsByClassName('qzpm_37')[i - 1].style.border = 'solid';
