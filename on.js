@@ -15,18 +15,18 @@ for (let i = 0; i < all.length; i++) {
 let background = document.createElement('div');
 background.style.display = 'block';
 background.style.position = 'absolute';
-background.style.height = '100%';
+background.style.minHeight = '100%';
 background.style.width = '100%';
 background.style.background = 'lightcyan';
 document.body.appendChild(background);
 
 let pageCount = document.createElement('div');
 pageCount.style.display = 'block';
-backgound.appendChild(pageCount);
+background.appendChild(pageCount);
 pageCount.style.width = '200px';
 pageCount.style.position = 'absolute';
-pageCount.style.top = '18%';
-pageCount.style.right = '50%';
+pageCount.style.top = '16%';
+pageCount.style.right = '39%';
 
 let currentPage = document.createElement('p');
 currentPage.style.display = 'inline-block';
@@ -35,15 +35,15 @@ pageCount.appendChild(currentPage);
 currentPage.style.position = 'relative';
 currentPage.style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
 currentPage.style.color = '#525252';
+currentPage.style.paddingRight = '5px';
 
 let endPage = document.createElement('p');
 endPage.style.display = 'inline-block';
-endPage.innerText = ` /  ${paragraphs.length}`;
+endPage.innerText = '/ ' + paragraphs.length;
 pageCount.appendChild(endPage);
 endPage.style.position = 'relative';
 endPage.style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
 endPage.style.color = '#525252';
-
 
 let header = document.createElement('h1');
 header.style.display = 'block';
@@ -53,7 +53,6 @@ header.style.textAlign = 'center';
 header.style.color = '#525252';
 header.style.marginTop = '30px';
 header.style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
-
 
 let nextButton = document.createElement('button');
 nextButton.style.display = 'block';
