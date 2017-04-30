@@ -18,6 +18,23 @@ background.style.width = '100%';
 background.style.background = 'lightcyan';
 document.body.appendChild(background);
 
+let currentPage = document.createElement('p');
+currentPage.style.display = 'block';
+currentPage.innerText = 1;
+background.appendChild(currentPage);
+currentPage.style.position = 'absolute';
+currentPage.style.top = '10%';
+currentPage.style.right = '50%';
+
+let endPage = document.createElement('p');
+endPage.style.display = 'block';
+endPage.innerText = ` /  ${paragraphs.length}`;
+background.appendChild(endPage);
+endPage.style.position = 'absolute';
+endPage.style.top = '10%';
+endPage.style.right = '45%';
+
+
 let nextButton = document.createElement('button');
 nextButton.style.display = 'block';
 nextButton.innerText = ' > ';
@@ -71,6 +88,7 @@ if (i === 0) {
 }
 
 nextButton.onclick = () => {
+  currentPage.innerText ++;
   document.getElementsByClassName('qzpm_37')[i].style.display = 'none';
   if (!document.getElementsByClassName('qzpm_37')[i + 1]) {
     let paragraph = document.createElement('p');
@@ -103,6 +121,7 @@ nextButton.onclick = () => {
 background.appendChild(nextButton);
 
 prevButton.onclick = () => {
+  currentPage.innerText --;
   document.getElementsByClassName('qzpm_37')[i].style.display = 'none';
   document.getElementsByClassName('qzpm_37')[i - 1].style.display = 'block';
   document.getElementsByClassName('qzpm_37')[i - 1].style.color = '#525252';
