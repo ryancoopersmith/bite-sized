@@ -4,6 +4,8 @@ for (let i = 0; i < text.length; i++) {
   paragraphs.push(text[i].innerText);
 }
 
+let title = document.getElementsByTagName('h1')[0].innerText;
+
 let body = document.getElementsByTagName('body')[0];
 let all = body.getElementsByTagName('*');
 for (let i = 0; i < all.length; i++) {
@@ -17,6 +19,15 @@ background.style.height = '100%';
 background.style.width = '100%';
 background.style.background = 'lightcyan';
 document.body.appendChild(background);
+
+let header = document.createElement('h1');
+header.style.display = 'block';
+header.innerText = title;
+background.appendChild(header);
+header.style.textAlign = 'center';
+header.style.color = '#525252';
+header.style.marginTop = '30px';
+header.style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
 
 let nextButton = document.createElement('button');
 nextButton.style.display = 'block';
@@ -34,7 +45,6 @@ nextButton.style.width = '50px';
 nextButton.style.fontSize = '30px';
 nextButton.style.background = 'lightcyan';
 
-
 let prevButton = document.createElement('button');
 prevButton.style.display = 'block';
 prevButton.innerText = ' < ';
@@ -50,7 +60,6 @@ prevButton.style.width = '50px';
 prevButton.style.fontSize = '30px';
 prevButton.style.background = 'lightcyan';
 
-
 let didCreatePrev = false;
 let i = 0;
 if (i === 0) {
@@ -61,13 +70,14 @@ if (i === 0) {
   paragraph.className += 'qzpm_37';
   background.appendChild(paragraph);
   paragraph.style.color = '#525252';
-  paragraph.style.margin =  '100px';
+  paragraph.style.margin = '100px';
   paragraph.style.fontSize = '1.4em';
   paragraph.style.lineHeight = '2em';
   paragraph.style.border = 'solid';
   paragraph.style.borderRadius = '15px';
   paragraph.style.padding = '10px';
   paragraph.style.background = 'lightcyan';
+  paragraph.style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
 }
 
 nextButton.onclick = () => {
@@ -80,13 +90,14 @@ nextButton.onclick = () => {
     paragraph.className += 'qzpm_37';
     background.appendChild(paragraph);
     paragraph.style.color = '#525252';
-    paragraph.style.margin =  '100px';
+    paragraph.style.margin = '100px';
     paragraph.style.fontSize = '1.4em';
     paragraph.style.lineHeight = '2em';
     paragraph.style.border = 'solid';
     paragraph.style.borderRadius = '15px';
     paragraph.style.padding = '10px';
     paragraph.style.background = 'lightcyan';
+    paragraph.style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
   } else {
     document.getElementsByClassName('qzpm_37')[i + 1].style.display = 'block';
   }
@@ -113,6 +124,8 @@ prevButton.onclick = () => {
   document.getElementsByClassName('qzpm_37')[i - 1].style.borderRadius = '15px';
   document.getElementsByClassName('qzpm_37')[i - 1].style.padding = '10px';
   document.getElementsByClassName('qzpm_37')[i - 1].style.background = 'lightcyan';
+  document.getElementsByClassName('qzpm_37')[i - 1].style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
+
   i--;
   if (i === 0) {
     prevButton.style.display = 'none';
@@ -137,3 +150,4 @@ quote.style.marginBottom = '30px';
 quote.style.marginTop = '15px';
 quote.innerText = 'Remember to stay calm and breathe.';
 quoteContainer.appendChild(quote);
+quote.style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
