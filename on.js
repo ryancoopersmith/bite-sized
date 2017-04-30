@@ -15,7 +15,7 @@ background.style.display = 'block';
 background.style.position = 'absolute';
 background.style.height = '100%';
 background.style.width = '100%';
-background.style.background = '#B3E7D1';
+background.style.background = 'lightcyan';
 document.body.appendChild(background);
 
 let nextButton = document.createElement('button');
