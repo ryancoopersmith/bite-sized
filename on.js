@@ -10,17 +10,21 @@ for (let i = 0; i < all.length; i++) {
   all[i].style.display = 'none';
 }
 
+let background = document.createElement('div');
+background.style.display = 'block';
+background.style.height = '100vh';
+background.style.background = 'lightcyan';
+document.body.appendChild(background);
+
 let nextButton = document.createElement('button');
 nextButton.style.display = 'block';
 nextButton.innerText = 'Next';
 nextButton.className += 'qzpm_47';
 
-
 let prevButton = document.createElement('button');
 prevButton.style.display = 'block';
 prevButton.innerText = 'Previous';
 prevButton.className += 'qzpm_57';
-
 
 let didCreatePrev = false;
 let i = 0;
@@ -30,7 +34,7 @@ if (i === 0) {
   paragraph.innerText = paragraphs[i];
   paragraph.style.display = 'block';
   paragraph.className += 'qzpm_37';
-  document.body.appendChild(paragraph);
+  background.appendChild(paragraph);
 }
 
 nextButton.onclick = () => {
@@ -41,7 +45,7 @@ nextButton.onclick = () => {
     paragraph.innerText = paragraphs[i + 1];
     paragraph.style.display = 'block';
     paragraph.className += 'qzpm_37';
-    document.body.appendChild(paragraph);
+    background.appendChild(paragraph);
   } else {
     document.getElementsByClassName('qzpm_37')[i + 1].style.display = 'block';
   }
@@ -49,13 +53,13 @@ nextButton.onclick = () => {
   if (i === paragraphs.length - 1) {
     nextButton.style.display = 'none';
   } else if (i === 1 && !didCreatePrev) {
-    document.body.appendChild(prevButton);
+    background.appendChild(prevButton);
     didCreatePrev = true;
   } else if (i === 1) {
     prevButton.style.display = 'block';
   }
 };
-document.body.appendChild(nextButton);
+background.appendChild(nextButton);
 
 prevButton.onclick = () => {
   document.getElementsByClassName('qzpm_37')[i].style.display = 'none';
