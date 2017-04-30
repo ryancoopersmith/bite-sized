@@ -15,7 +15,7 @@ background.style.display = 'block';
 background.style.position = 'absolute';
 background.style.height = '100%';
 background.style.width = '100%';
-background.style.background = 'lightcyan';
+background.style.background = '#B3E7D1';
 document.body.appendChild(background);
 
 let nextButton = document.createElement('button');
@@ -51,8 +51,8 @@ if (i === 0) {
   paragraph.style.lineHeight = '2em';
   paragraph.style.border = 'solid';
   paragraph.style.borderRadius = '15px';
-  paragraph.style.padding = '10px 10px 10px 10px';
-
+  paragraph.style.padding = '10px';
+  paragraph.style.background = 'lightcyan';
 }
 
 nextButton.onclick = () => {
@@ -70,7 +70,8 @@ nextButton.onclick = () => {
     paragraph.style.lineHeight = '2em';
     paragraph.style.border = 'solid';
     paragraph.style.borderRadius = '15px';
-    paragraph.style.padding = '10px 10px 10px 10px';
+    paragraph.style.padding = '10px';
+    paragraph.style.background = 'lightcyan';
   } else {
     document.getElementsByClassName('qzpm_37')[i + 1].style.display = 'block';
   }
@@ -95,8 +96,8 @@ prevButton.onclick = () => {
   document.getElementsByClassName('qzpm_37')[i - 1].style.lineHeight = '2em';
   document.getElementsByClassName('qzpm_37')[i - 1].style.border = 'solid';
   document.getElementsByClassName('qzpm_37')[i - 1].style.borderRadius = '15px';
-  document.getElementsByClassName('qzpm_37')[i - 1].style.padding = '10px 10px 10px 10px';
-
+  document.getElementsByClassName('qzpm_37')[i - 1].style.padding = '10px';
+  document.getElementsByClassName('qzpm_37')[i - 1].style.background = 'lightcyan';
   i--;
   if (i === 0) {
     prevButton.style.display = 'none';
