@@ -4,6 +4,8 @@ for (let i = 0; i < text.length; i++) {
   paragraphs.push(text[i].innerText);
 }
 
+let title = document.getElementsByTagName('h1')[0].innerText;
+
 let body = document.getElementsByTagName('body')[0];
 let all = body.getElementsByTagName('*');
 for (let i = 0; i < all.length; i++) {
@@ -18,25 +20,46 @@ background.style.width = '100%';
 background.style.background = 'lightcyan';
 document.body.appendChild(background);
 
+let pageCount = document.createElement('div');
+pageCount.style.display = 'block';
+backgound.appendChild(pageCount);
+pageCount.style.width = '200px';
+pageCount.style.position = 'absolute';
+pageCount.style.top = '18%';
+pageCount.style.right = '50%';
+
 let currentPage = document.createElement('p');
-currentPage.style.display = 'block';
+currentPage.style.display = 'inline-block';
 currentPage.innerText = 1;
-background.appendChild(currentPage);
-currentPage.style.position = 'absolute';
-currentPage.style.top = '10%';
-currentPage.style.right = '50%';
+pageCount.appendChild(currentPage);
+currentPage.style.position = 'relative';
+currentPage.style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
+currentPage.style.color = '#525252';
 
 let endPage = document.createElement('p');
-endPage.style.display = 'block';
+endPage.style.display = 'inline-block';
 endPage.innerText = ` /  ${paragraphs.length}`;
-background.appendChild(endPage);
-endPage.style.position = 'absolute';
-endPage.style.top = '10%';
-endPage.style.right = '45%';
+pageCount.appendChild(endPage);
+endPage.style.position = 'relative';
+endPage.style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
+endPage.style.color = '#525252';
+
+
+let header = document.createElement('h1');
+header.style.display = 'block';
+header.innerText = title;
+background.appendChild(header);
+header.style.textAlign = 'center';
+header.style.color = '#525252';
+header.style.marginTop = '30px';
+header.style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
 
 
 let nextButton = document.createElement('button');
 nextButton.style.display = 'block';
+nextButton.style.color = '#525252';
+nextButton.style.textDecoration = 'none';
+nextButton.style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
 nextButton.innerText = ' > ';
 nextButton.className += 'qzpm_47';
 nextButton.style.position = 'absolute';
@@ -51,10 +74,12 @@ nextButton.style.width = '50px';
 nextButton.style.fontSize = '30px';
 nextButton.style.background = 'lightcyan';
 
-
 let prevButton = document.createElement('button');
 prevButton.style.display = 'block';
 prevButton.innerText = ' < ';
+prevButton.style.textDecoration = 'none';
+prevButton.style.color = '#525252';
+prevButton.style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
 prevButton.className += 'qzpm_57';
 prevButton.style.position = 'absolute';
 prevButton.style.top = '55%';
@@ -67,7 +92,6 @@ prevButton.style.width = '50px';
 prevButton.style.fontSize = '30px';
 prevButton.style.background = 'lightcyan';
 
-
 let didCreatePrev = false;
 let i = 0;
 if (i === 0) {
@@ -78,13 +102,14 @@ if (i === 0) {
   paragraph.className += 'qzpm_37';
   background.appendChild(paragraph);
   paragraph.style.color = '#525252';
-  paragraph.style.margin =  '100px';
+  paragraph.style.margin = '100px';
   paragraph.style.fontSize = '1.4em';
   paragraph.style.lineHeight = '2em';
   paragraph.style.border = 'solid';
   paragraph.style.borderRadius = '15px';
   paragraph.style.padding = '10px';
   paragraph.style.background = 'lightcyan';
+  paragraph.style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
 }
 
 nextButton.onclick = () => {
@@ -98,13 +123,14 @@ nextButton.onclick = () => {
     paragraph.className += 'qzpm_37';
     background.appendChild(paragraph);
     paragraph.style.color = '#525252';
-    paragraph.style.margin =  '100px';
+    paragraph.style.margin = '100px';
     paragraph.style.fontSize = '1.4em';
     paragraph.style.lineHeight = '2em';
     paragraph.style.border = 'solid';
     paragraph.style.borderRadius = '15px';
     paragraph.style.padding = '10px';
     paragraph.style.background = 'lightcyan';
+    paragraph.style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
   } else {
     document.getElementsByClassName('qzpm_37')[i + 1].style.display = 'block';
   }
@@ -132,6 +158,8 @@ prevButton.onclick = () => {
   document.getElementsByClassName('qzpm_37')[i - 1].style.borderRadius = '15px';
   document.getElementsByClassName('qzpm_37')[i - 1].style.padding = '10px';
   document.getElementsByClassName('qzpm_37')[i - 1].style.background = 'lightcyan';
+  document.getElementsByClassName('qzpm_37')[i - 1].style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
+
   i--;
   if (i === 0) {
     prevButton.style.display = 'none';
@@ -156,3 +184,4 @@ quote.style.marginBottom = '30px';
 quote.style.marginTop = '15px';
 quote.innerText = 'Remember to stay calm and breathe.';
 quoteContainer.appendChild(quote);
+quote.style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
