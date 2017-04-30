@@ -16,7 +16,6 @@ background.style.height = '100vh';
 background.style.background = 'lightcyan';
 document.body.appendChild(background);
 
-
 let nextButton = document.createElement('button');
 nextButton.style.display = 'block';
 nextButton.innerText = 'Next';
@@ -87,5 +86,5 @@ quote.style.fontStyle = 'italic';
 quote.style.textAlign = 'center';
 quote.style.marginBottom = '30px';
 quote.style.marginTop = '15px';
-quote.innerText = 'Remember to stay calm and breathe.'
+quote.innerText = 'Remember to stay calm and breathe.';
 quoteContainer.appendChild(quote);
