@@ -16,6 +16,7 @@ background.style.height = '100vh';
 background.style.background = 'lightcyan';
 document.body.appendChild(background);
 
+
 let nextButton = document.createElement('button');
 nextButton.style.display = 'block';
 nextButton.innerText = 'Next';
@@ -102,3 +103,20 @@ prevButton.onclick = () => {
     nextButton.style.display = 'block';
   }
 };
+
+let quoteContainer = document.createElement('div');
+quoteContainer.style.display = 'block';
+quoteContainer.style.position = 'absolute';
+quoteContainer.style.width = '100%';
+quoteContainer.style.bottom = '0';
+quoteContainer.style.background = '#A8BBD8';
+background.appendChild(quoteContainer);
+
+let quote = document.createElement('p');
+quote.style.display = 'block';
+quote.style.fontStyle = 'italic';
+quote.style.textAlign = 'center';
+quote.style.marginBottom = '30px';
+quote.style.marginTop = '15px';
+quote.innerText = 'Remember to stay calm and breathe.'
+quoteContainer.appendChild(quote);
