@@ -126,8 +126,9 @@ nextButton.onclick = () => {
     paragraph.style.fontSize = '1.4em';
     paragraph.style.lineHeight = '2em';
     paragraph.style.border = 'solid';
-    paragraph.style.borderRadius = '15px';
-    paragraph.style.padding = '10px';
+    paragraph.style.borderWidth = 'thin';
+    paragraph.style.borderRadius = '30px';
+    paragraph.style.padding = '30px';
     paragraph.style.background = 'lightcyan';
     paragraph.style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
   } else {
