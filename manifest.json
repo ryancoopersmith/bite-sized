@@ -3,7 +3,7 @@
 
   "name": "Bite Sized",
   "description": "Displays web page content in bite sized chunks. Developed for those suffering from anxiety and attention disorders",
-  "version": "1.1",
+  "version": "1.2",
 
   "browser_action": {
     "default_icon": "off.png",
