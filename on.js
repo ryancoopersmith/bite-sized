@@ -1,7 +1,9 @@
 let text = document.getElementsByTagName('p');
 let paragraphs = [];
 for (let i = 0; i < text.length; i++) {
-  paragraphs.push(text[i].innerText);
+  if (text[i].innerText && text[i].innerText !== 'Advertisement') {
+    paragraphs.push(text[i].innerText);
+  }
 }
 
 let title = document.getElementsByTagName('h1')[0].innerText;
@@ -67,7 +69,6 @@ nextButton.style.right = '2%';
 nextButton.style.borderRadius = '10px';
 nextButton.style.border = '2px solid';
 nextButton.style.fontWeight = 'bold';
-nextButton.style.fontWeight = 'bold';
 nextButton.style.height = '50px';
 nextButton.style.width = '50px';
 nextButton.style.fontSize = '30px';
@@ -97,7 +98,6 @@ if (i === 0) {
   let paragraph = document.createElement('p');
   paragraph.style.display = 'block';
   paragraph.innerText = paragraphs[i];
-  paragraph.style.display = 'block';
   paragraph.className += 'qzpm_37';
   background.appendChild(paragraph);
   paragraph.style.color = '#525252';
@@ -105,8 +105,9 @@ if (i === 0) {
   paragraph.style.fontSize = '1.4em';
   paragraph.style.lineHeight = '2em';
   paragraph.style.border = 'solid';
+  paragraph.style.borderWidth = 'thin';
   paragraph.style.borderRadius = '15px';
-  paragraph.style.padding = '10px';
+  paragraph.style.padding = '30px';
   paragraph.style.background = 'lightcyan';
   paragraph.style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
 }
@@ -118,7 +119,6 @@ nextButton.onclick = () => {
     let paragraph = document.createElement('p');
     paragraph.style.display = 'block';
     paragraph.innerText = paragraphs[i + 1];
-    paragraph.style.display = 'block';
     paragraph.className += 'qzpm_37';
     background.appendChild(paragraph);
     paragraph.style.color = '#525252';
@@ -127,7 +127,7 @@ nextButton.onclick = () => {
     paragraph.style.lineHeight = '2em';
     paragraph.style.border = 'solid';
     paragraph.style.borderWidth = 'thin';
-    paragraph.style.borderRadius = '30px';
+    paragraph.style.borderRadius = '15px';
     paragraph.style.padding = '30px';
     paragraph.style.background = 'lightcyan';
     paragraph.style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
@@ -155,8 +155,9 @@ prevButton.onclick = () => {
   document.getElementsByClassName('qzpm_37')[i - 1].style.fontSize = '1.4em';
   document.getElementsByClassName('qzpm_37')[i - 1].style.lineHeight = '2em';
   document.getElementsByClassName('qzpm_37')[i - 1].style.border = 'solid';
+  document.getElementsByClassName('qzpm_37')[i - 1].style.borderWidth = 'thin';
   document.getElementsByClassName('qzpm_37')[i - 1].style.borderRadius = '15px';
-  document.getElementsByClassName('qzpm_37')[i - 1].style.padding = '10px';
+  document.getElementsByClassName('qzpm_37')[i - 1].style.padding = '30px';
   document.getElementsByClassName('qzpm_37')[i - 1].style.background = 'lightcyan';
   document.getElementsByClassName('qzpm_37')[i - 1].style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
 
