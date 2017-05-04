@@ -186,3 +186,35 @@ quote.style.marginTop = '15px';
 quote.innerText = 'Remember to stay calm and breathe.';
 quoteContainer.appendChild(quote);
 quote.style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
+
+let colors = document.createElement('div');
+colors.style.display = 'block';
+colors.style.width = '300px';
+colors.style.position = 'absolute';
+colors.style.right = '0px';
+colors.style.top = '0px';
+colors.style.height = '70px';
+background.appendChild(colors);
+
+let colorChoices = ['lightcyan', '#C0A9D3', '#E4E2D6', '#BBCCBA', '#82CAE3', '#EECC73'];
+for (var j = 0; j < colorChoices.length; j++) {
+  let color = document.createElement('div');
+  color.style.background = colorChoices[j];
+  color.style.display = 'inline-block';
+  color.style.width = '50px';
+  color.style.position = 'relative';
+  color.style.height = '50px';
+  color.onclick = function() {
+    background.style.background = color.style.background;
+  };
+  colors.appendChild(color);
+}
+
+let message = document.createElement('p');
+message.style.display = 'block';
+message.style.fontStyle = 'italic';
+message.style.fontFamily = 'Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif';
+message.style.textAlign = 'center';
+message.style.fontWeight = 'lighter';
+message.innerText = 'Choose a color';
+colors.appendChild(message);
