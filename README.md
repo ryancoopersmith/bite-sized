@@ -6,5 +6,6 @@ This extension displays web page content in bite sized chunks. Developed for gre
 
 ## Authors
 
+- Arielle Landau
 - Evianne Keeney
 - Ryan Coopersmith
